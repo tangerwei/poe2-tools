@@ -1,8 +1,7 @@
-import { Card, Row, Col, Space, Typography } from 'antd'
+import { Card, Row, Col } from 'antd'
 import { useChapterStore } from '../../../hooks/useChapterStore'
 import { MapDetail } from '../../MapDetail'
 
-const { Title } = Typography
 
 const mapData = [
   { 
@@ -142,7 +141,6 @@ export function MapList() {
     
     return (
       <MapDetail
-        mapId={selectedMap.id}
         mapName={selectedMap.name}
         mapDescription={selectedMap.description}
         strategy={selectedMap.strategy}

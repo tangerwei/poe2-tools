@@ -1,5 +1,5 @@
 import { Card, Row, Col } from 'antd'
-import { useNavigationStore } from './useNavigationStore'
+import { useChapterStore } from './useChapterStore'
 import { MapDetail } from '../components/MapDetail'
 
 interface MapData {
@@ -9,7 +9,7 @@ interface MapData {
 }
 
 export function useMapList(mapData: MapData[]) {
-  const { selectedMapId, setSelectedMapId } = useNavigationStore()
+  const { selectedMapId, setSelectedMapId } = useChapterStore()
   
   const selectedMap = mapData.find(map => map.id === selectedMapId)
   
@@ -17,7 +17,6 @@ export function useMapList(mapData: MapData[]) {
     if (selectedMap) {
       return (
         <MapDetail
-          mapId={selectedMap.id}
           mapName={selectedMap.name}
           mapDescription={selectedMap.description}
           onClose={() => setSelectedMapId(null)}

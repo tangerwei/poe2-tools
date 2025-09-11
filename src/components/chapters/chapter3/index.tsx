@@ -33,7 +33,6 @@ export function Chapter3() {
           
           return (
             <MapDetail
-              mapId={selectedMap.id}
               mapName={selectedMap.name}
               mapDescription={selectedMap.description}
               onClose={() => setSelectedMapId(null)}

@@ -5,7 +5,6 @@ import { useEffect } from 'react'
 const { Title, Text } = Typography
 
 interface MapDetailProps {
-  mapId: string
   mapName: string
   mapDescription: string
   strategy?: string[]
@@ -14,7 +13,7 @@ interface MapDetailProps {
   onPrev?: () => void
 }
 
-export function MapDetail({ mapId, mapName, mapDescription, strategy, onClose, onNext, onPrev }: MapDetailProps) {
+export function MapDetail({ mapName, mapDescription, strategy, onClose, onNext, onPrev }: MapDetailProps) {
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {

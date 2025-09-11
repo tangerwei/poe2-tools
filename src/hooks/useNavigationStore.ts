@@ -19,5 +19,6 @@ export function useNavigationStore() {
     goToPreviousChapter: () => navigationStore.goToPreviousChapter(),
     getNextChapter: () => navigationStore.getNextChapter(),
     getPreviousChapter: () => navigationStore.getPreviousChapter(),
+    setSelectedMapId: (mapId: string | null) => navigationStore.setSelectedMapId(mapId),
   }
 }

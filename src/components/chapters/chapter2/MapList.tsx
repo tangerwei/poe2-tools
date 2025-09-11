@@ -128,7 +128,6 @@ export function MapList() {
     
     return (
       <MapDetail
-        mapId={selectedMap.id}
         mapName={selectedMap.name}
         mapDescription={selectedMap.description}
         strategy={selectedMap.strategy}

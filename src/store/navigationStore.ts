@@ -5,7 +5,8 @@ class NavigationStore {
   private stateSubject = new BehaviorSubject<NavigationState>({
     selectedKey: this.getFromLocalStorage('activeMenu', 'chapter1'),
     openKeys: this.getFromLocalStorage('openMenuKeys', ['story']),
-    collapsed: this.getFromLocalStorage('siderCollapsed', false)
+    collapsed: this.getFromLocalStorage('siderCollapsed', false),
+    selectedMapId: null
   })
 
   public state$ = this.stateSubject.asObservable()
@@ -73,6 +74,11 @@ class NavigationStore {
     if (prevChapter) {
       this.setSelectedKey(prevChapter)
     }
+  }
+
+  setSelectedMapId(mapId: string | null) {
+    const newState = { ...this.currentState, selectedMapId: mapId }
+    this.updateState(newState)
   }
 
 

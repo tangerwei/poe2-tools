@@ -2,6 +2,7 @@ export interface NavigationState {
   selectedKey: string
   openKeys: string[]
   collapsed: boolean
+  selectedMapId: string | null
 }
 
 export interface StoryChapter {
