@@ -13,7 +13,8 @@ import {
   TeamOutlined,
   ShoppingOutlined,
   BarChartOutlined,
-  SettingOutlined
+  SettingOutlined,
+  ExperimentOutlined
 } from '@ant-design/icons'
 import { useNavigationStore } from './hooks/useNavigationStore'
 import { StoryOverview } from './components/StoryOverview'
@@ -23,6 +24,8 @@ import { Chapter3 } from './components/chapters/chapter3'
 import { Chapter4 } from './components/chapters/chapter4'
 import { Interlude } from './components/chapters/interlude'
 import { PlaceholderPage } from './components/PlaceholderPage'
+import { MovementPenalty } from './components/game-mechanics/movement-penalty'
+import { GameMechanics } from './components/game-mechanics'
 
 const { Sider, Content, Footer } = Layout
 const { Title } = Typography
@@ -66,6 +69,17 @@ function App() {
         {
           key: 'interlude',
           label: '间章',
+        },
+      ],
+    },
+    {
+      key: 'game-mechanics',
+      icon: <ExperimentOutlined />,
+      label: '游戏机制',
+      children: [
+        {
+          key: 'movement-penalty',
+          label: '移速惩罚',
         },
       ],
     },
@@ -165,6 +179,10 @@ function App() {
             <Interlude />
           </Space>
         )
+      case 'game-mechanics':
+        return <GameMechanics />
+      case 'movement-penalty':
+        return <MovementPenalty />
       case 'build-planner':
         return <PlaceholderPage title="Build Planner - Coming Soon" />
       case 'skill-tree':
