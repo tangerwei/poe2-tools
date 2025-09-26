@@ -182,25 +182,9 @@ export function SanctumOverview() {
           layout="horizontal"
           onValuesChange={onValuesChange}
           initialValues={{
-            multiplier: 100,
             skillLevel: 3
           }}
         >
-          <FormItem label="圣化倍率">
-            <Form.Item
-              name="multiplier"
-              style={{ marginBottom: 0 }}
-            >
-              <InputNumber
-                min={80}
-                max={120}
-                style={{ width: 120 }}
-                formatter={value => `${value}%`}
-                parser={(value) => Number(value?.replace('%', '')) as any}
-              />
-            </Form.Item>
-          </FormItem>
-
           <Divider orientation="left" style={{ margin: '12px 0' }}>装备属性</Divider>
 
           <FormItem label="技能等级">
