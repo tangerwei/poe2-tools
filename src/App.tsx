@@ -25,6 +25,7 @@ import { Chapter4 } from './components/chapters/chapter4'
 import { Interlude } from './components/chapters/interlude'
 import { PlaceholderPage } from './components/PlaceholderPage'
 import { MovementPenalty } from './components/game-mechanics/movement-penalty'
+import { Sanctum } from './components/game-mechanics/sanctum'
 import { GameMechanics } from './components/game-mechanics'
 
 const { Sider, Content, Footer } = Layout
@@ -80,6 +81,10 @@ function App() {
         {
           key: 'movement-penalty',
           label: '移速惩罚',
+        },
+        {
+          key: 'sanctum',
+          label: '圣化',
         },
       ],
     },
@@ -183,6 +188,8 @@ function App() {
         return <GameMechanics />
       case 'movement-penalty':
         return <MovementPenalty />
+      case 'sanctum':
+        return <Sanctum />
       case 'build-planner':
         return <PlaceholderPage title="Build Planner - Coming Soon" />
       case 'skill-tree':

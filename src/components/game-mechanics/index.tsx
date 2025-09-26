@@ -1,5 +1,5 @@
 import { Typography, Card, Row, Col, Space } from 'antd'
-import { ThunderboltOutlined, DashboardOutlined, FireOutlined, SafetyOutlined } from '@ant-design/icons'
+import { ThunderboltOutlined, DashboardOutlined, FireOutlined, SafetyOutlined, CrownOutlined } from '@ant-design/icons'
 import { useNavigationStore } from '../../hooks/useNavigationStore'
 
 const { Title, Paragraph } = Typography
@@ -21,6 +21,13 @@ export function GameMechanics() {
       title: '移速惩罚',
       description: '了解不同护甲和盾牌对移动速度的影响，以及如何减免这些惩罚',
       icon: <DashboardOutlined style={{ fontSize: 32 }} />,
+      available: true,
+    },
+    {
+      key: 'sanctum',
+      title: '圣化',
+      description: '探索圣所，管理决心值，获取丰厚奖励的终盘内容',
+      icon: <CrownOutlined style={{ fontSize: 32 }} />,
       available: true,
     },
     {

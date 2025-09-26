@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import { Card, Form, InputNumber, Radio, Space, Typography, Divider, Checkbox, Row, Col, Table } from 'antd'
+import { Card, Form, InputNumber, Space, Typography, Divider, Checkbox, Table } from 'antd'
 import { FormItemPlx } from './FormItemPlx'
 import type { ColumnsType } from 'antd/es/table'
 
-const { Title, Text } = Typography
+const { Text } = Typography
 
 interface SkillGem {
   key: string
@@ -162,7 +162,7 @@ export function MovementSpeedCalculator() {
     setSpeedResults(results)
   }
 
-  const onValuesChange = (changedValues: any, allValues: CalculatorValues) => {
+  const onValuesChange = (_changedValues: any, allValues: CalculatorValues) => {
     calculateSpeed(allValues)
   }
 

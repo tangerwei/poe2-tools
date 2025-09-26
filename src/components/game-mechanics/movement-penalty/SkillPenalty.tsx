@@ -1,7 +1,6 @@
-import { Typography, Card, Space, Alert, Collapse } from 'antd'
+import { Space, Alert, Collapse } from 'antd'
 import { MovementSpeedCalculator } from './MovementSpeedCalculator'
 
-const { Title, Paragraph, Text } = Typography
 const { Panel } = Collapse
 
 // 使用装饰器模式的替代方案：静态属性
